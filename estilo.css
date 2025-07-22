@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 /* ======== BASE ======== */
 body {
   font-family: 'Barlow Condensed', sans-serif;
@@ -71,8 +75,11 @@ h3 {
   transition: color 0.3s;
 }
 
+.nav-links li a.active,
 .nav-links li a:hover {
-  color: #999;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem;
 }
 
 /* ======== BOTÃO HAMBURGER ======== */
@@ -360,4 +367,61 @@ h3 {
   .hamburger {
     display: none;
   }
+}
+
+/* ======== HERO SOBRE ======== */
+.hero-sobre {
+  background-color: #16e65b;
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero-sobre h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-sobre p {
+  font-size: 1.4rem;
+}
+
+/* ======== SEÇÕES SOBRE ======== */
+.sobre-quem-somos, .sobre-projetos, .sobre-premiacoes {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.sobre-quem-somos h2, .sobre-projetos h2, .sobre-premiacoes h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+}
+
+.sobre-quem-somos p, .sobre-premiacoes p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.sobre-projetos .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.sobre-projetos .card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.sobre-projetos .card:hover {
+  transform: translateY(-5px);
 }
