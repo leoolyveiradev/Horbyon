@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zonefall - Horbyon</title>
+
+  <!-------- GOOGLE FONTES -------->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-------- LINK DO CSS -------->
+  <link rel="stylesheet" href="Zonefall.css" />
+
+  <!-------- ÍCONES -------->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-------- LOADER -------->
+  <div id="logo-carregando">
+    <img src="imagens/Logo Horbyon.svg" alt="Logo carregando" />
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="inicio.html">
+          <img src="imagens/Logo Horbyon.svg" alt="Logo Horbyon" />
+        </a>
+      </div>
+
+      <nav class="navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="inicio.html">Início</a></li>
+          <li><a href="jogos.html" class="active">Jogos</a></li>
+          <li><a href="apps.html">Apps</a></li>
+          <li><a href="sobre-a-horbyon.html">Sobre</a></li>
+        </ul>
+
+        <div class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <article class="game-detail">
+
+      <img
+        src="./imagens/2.svg"
+        alt="Capa do jogo Zonefall"
+        class="game-cover"
+      />
+
+      <p>
+        <strong>Zonefall</strong> é um jogo de tiro em mundo aberto onde você deve lutar, sobreviver e ser o TOP 1 da partida! Explore o ambiente, colete armas e recursos, e vença seus adversários com estratégia e habilidade.
+      </p>
+
+      <section class="section" id="caracteristicas">
+        <h2>Características do jogo</h2>
+        <ul>
+          <li>Mundo aberto com diferentes zonas de combate</li>
+          <li>Variedade de armas e equipamentos</li>
+          <li>Modo multiplayer online</li>
+          <li>Gráficos imersivos</li>
+          <li>Eventos e missões especiais semanais</li>
+        </ul>
+      </section>
+
+      <button id="btnBaixar" type="button">Baixar</button>
+
+      <a href="jogos.html" class="btn" style="display:block; max-width:220px; margin:36px auto 0; text-align:center;">
+        Voltar aos Jogos
+      </a>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="imagens/Logo Horbyon.svg" alt="Logo Horbyon"/>
+        <p>Inovação e tecnologia para o futuro.</p>
+      </div>
+
+      <!-------- TERMOS E AFINS -------->
+      <div class="footer-links">
+        <a href="#">Termos de Serviço</a>
+        <a href="#">Política de Privacidade</a>
+      </div>
+
+      <!-------- LINKS REDES SOCIAIS -------->
+      <div class="footer-contact">
+        <h4>Redes Sociais</h4>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/horbyon" target="_blank" rel="noopener" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com" target="_blank" rel="noopener" class="twitter" aria-label="X/Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://youtube.com/@horbyon" target="_blank" rel="noopener" class="youtube" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://linkedin.com/in/leoolyveiradev" target="_blank" rel="noopener" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-------- CONTAINER E-MAIL -------->
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Receba novidades e atualizações direto no seu e-mail.</p>
+        <form>
+          <input type="email" placeholder="Digite seu e-mail" required />
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-------- COPYRIGHT -------->
+    <div class="footer-bottom">
+      <p>&copy; 2025 Desenvolvido pela HORBYON. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    //== ESCONDE O LOADER QUANDO A PÁGINA TERMINAR DE CARREGAR ==//
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("logo-carregando");
+      if (loader) loader.style.display = "none";
+    });
+
+    //== TOGLE DO MENU MOBILE ==//
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+    if (hamburger && navLinks) {
+      hamburger.addEventListener("click", () => {
+        const isOpen = hamburger.classList.toggle("open");
+        navLinks.classList.toggle("active");
+        hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+
+      //== FECHA O MENU AO CLICAR EM UM LINK ==//
+      navLinks.querySelectorAll("a").forEach(a => {
+        a.addEventListener("click", () => {
+          if (navLinks.classList.contains("active")) {
+            navLinks.classList.remove("active");
+            hamburger.classList.remove("open");
+            hamburger.setAttribute("aria-expanded", "false");
+          }
+        });
+      });
+    }
+
+    //== "VER MAIS" ROLA ATÉ A SEÇÃO DE CARACTERÍSTICAS ==//
+    const btnVerMais = document.getElementById("btnVerMais");
+    if (btnVerMais) {
+      btnVerMais.addEventListener("click", () => {
+        const alvo = document.getElementById("caracteristicas");
+        if (alvo) alvo.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
+  </script>
+</body>
+</html>

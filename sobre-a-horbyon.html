@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre a Horbyon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Loader -->
+<div id="logo-carregando">
+  <img src="imagens/Logo Horbyon.svg" alt="Logo carregando" class="logo" />
+</div>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="imagens/Logo Horbyon.svg" alt="Logo Horbyon" />
+        </a>
+      </div>
+
+      <nav class="navigation">
+        <ul class="nav-links">
+          <li><a href="inicio.html">Início</a></li>
+          <li><a href="jogos.html" id="link-jogos">Jogos</a></li>
+          <li><a href="apps.html">Apps</a></li>
+          <li><a href="sobre-a-horbyon.html" class="active">Sobre</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="apresentacao">
+      <div class="container">
+        <div class="texto-apresentacao">
+          <h1>O que é a Horbyon?</h1>
+          <h2>Inovação, criatividade e tecnologia para o futuro.</h2>
+          <p>A Horbyon é uma desenvolvedora dedicada a criar experiências digitais únicas com jogos, aplicativos e sites de alta qualidade. Nosso objetivo é proporcionar soluções tecnológicas que encantem os usuários e gerem impacto positivo no mundo digital.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" id="premiacoes">
+      <h2>Premiações</h2>
+      <div class="cards">
+        <article class="card">
+          <div class="card-content">
+            <h3>🏆 Melhor App de 2025</h3>
+            <p>Reconhecimento nacional pelo app de produtividade.</p>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-content">
+            <h3>🥇 Destaque Indie 2024</h3>
+            <p>Prêmio pela inovação no desenvolvimento de jogos.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <article class="card">
+      <div class="card-content">
+        <h3>...</h3>
+        <img src="#" alt="">
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <img src="imagens/Logo Horbyon.svg" alt="Logo Horbyon" />
+        <p>Inovação e tecnologia para o futuro.</p>
+    </div>
+
+    <div class="social-icons">
+      <a href="https://www.instagram.com/seuPerfil" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/seuPerfil" target="_blank" class="linkedin"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.youtube.com/@seuCanal" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+    </div>
+
+      <div class="footer-links">
+        <h4>Links Rápidos</h4>
+        <a href="#">Política de Privacidade</a>
+      </div>
+      <div class="footer-contact">
+        <h4>Contato</h4>
+        <p><i class="fas fa-envelope"></i> horbyonstudios@gmail.com</p>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Newsletter</h4>
+        <p>Receba novidades e atualizações direto no seu e-mail.</p>
+        <form>
+          <input type="email" placeholder="Digite seu e-mail" required>
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Horbyon. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="scripts/script.js"></script>
+
+<script>
+  // Esconde o loader quando a página terminar de carregar
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("logo-carregando");
+    if (loader) {
+      loader.style.display = "none";
+    }
+  });
+</script>
+</body>
+</html>

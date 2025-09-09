@@ -1,0 +1,254 @@
+body {
+  font-family: "Barlow Condensed", sans-serif;
+  background: #0d0d0d;
+  color: #fff;
+  line-height: 1.6;
+  margin: 0;
+  padding-top: 0px;
+}
+
+/* Header */
+.site-header {
+  min-height: 10px;
+  background-color: #000000;
+  border-bottom: 1px solid #16e65b;
+  padding: 3px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100px;
+}
+
+.logo img {
+  height: 110px;
+  width: auto;
+}
+
+/* ======== MENU DE NAVEGAÇÃO DESKTOP ======== */
+.navigation .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: #fFF;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a.active,
+.nav-links li a:hover {
+  color: #16e65b;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+
+/* Loader */
+#logo-carregando {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #0d0d0d;
+}
+
+#logo-carregando img {
+  width: 100px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+
+/* Jogos Grid */
+.jogos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.jogos-container h1 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  color: #16e65b;
+}
+
+.jogos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.jogo-card {
+  background-color: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.jogo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(22, 230, 91, 0.3);
+}
+
+.jogo-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.jogo-card .conteudo {
+  padding: 20px;
+  text-align: center;
+}
+
+.jogo-card h2 {
+  font-size: 1.8rem;
+  margin: 10px 0;
+  color: #16e65b;
+}
+
+.jogo-card p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+.jogo-card a.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #16e65b;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.jogo-card a.btn:hover {
+  background-color: #14c650;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .jogos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #fff;
+  padding: 40px 20px 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+.footer-logo img {
+  max-width: 120px;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.social-icons a {
+  font-size: 24px;
+  margin-right: 12px;
+  color: #16e65b;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #14c650;
+}
+
+.footer-links h4,
+.footer-contact h4,
+.footer-newsletter h4 {
+  margin-bottom: 10px;
+  color: #16e65b;
+  font-size: 1.2rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin: 6px 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #16e65b;
+}
+
+.footer-newsletter form {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.footer-newsletter input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+}
+
+.footer-newsletter button {
+  padding: 8px 16px;
+  background: #16e65b;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer-newsletter button:hover {
+  background: #14c650;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 15px;
+  border-top: 1px solid #333;
+  font-size: 0.9rem;
+  margin-top: 20px;
+}

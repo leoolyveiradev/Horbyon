@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nossos Apps - Horbyon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #16e65b;
+      margin: 0;
+      padding: 0;
+      background-color: #050505;
+    }
+
+    /* ======== TÍTULOS ======== */
+    h1 {
+      font-size: 5rem;
+      font-weight: 550;
+      margin-top: -20px; /* sobe 20px */
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #000; /* preto */
+      font-weight: 430; /* mais fino */
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+    }
+
+    /* ======== CABEÇALHO ======== */
+    .site-header {
+      min-height: 10px;
+      background-color: #0e0e0e;
+      border-bottom: 0.5px solid #16e65b;
+      padding: 3px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    /* ======== CONTAINER FLEXÍVEL ======== */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 100px;
+    }
+
+    /* ======== LOGO ======== */
+    .logo img {
+      height: 110px;
+      width: auto;
+    }
+
+    /* ======== MENU ======== */
+    .navigation .nav-links {
+      list-style: none;        /* remove as bolinhas verdes */
+      display: flex;           /* deixa os itens lado a lado */
+      flex-direction: row;     /* garante que fiquem em linha */
+      gap: 40px;               /* espaço entre os links */
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li {
+        list-style: none; /* reforço para tirar marcadores */;
+    }
+
+    .nav-links li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.4rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links li a.active,
+    .nav-links li a:hover {
+      color: #16e65b;
+
+    }
+
+
+    /* ======== BOTÃO HAMBURGER ======== */
+    /* Esconde o hamburger no desktop */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+      z-index: 1300;
+    }
+
+    .hamburger span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 70%;
+        max-width: 320px;
+        background: #000000;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 20px;
+        padding: 40px 28px;
+        transform: translateX(100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: transform 0.35s ease, opacity 0.25s ease;
+        z-index: 1200;
+        font-size: 1.25rem;
+      }
+
+      .nav-links.active {
+        transform: translateX(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .hamburger.open span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      .hamburger.open span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+      }
+    }
+
+    /* Quando o menu hambúrguer está aberto, fixa no topo direito */
+    .hamburger.open {
+      position: fixed;
+      top: 20px;   /* distância do topo */
+      right: 20px; /* distância da lateral */
+      z-index: 2000; /* garante que fique acima do menu */
+    }
+
+    /* Quando virar X */
+    .hamburger.open span {
+      background-color: #16e65b; /* verde */
+    }
+
+    /* Esconde o hambúrguer no desktop */
+    /* Esconde o hambúrguer no desktop */
+    @media (min-width: 769px) {
+        .hamburger {
+            display: none;
+        }
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+                  url("");
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      color: #16e65b;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      color: #dddddd;
+    }
+
+    /* GRID DE NOTÍCIAS */
+    .news-section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+    }
+
+    .news-card {
+      background: #050505;
+      border: 1px solid rgba(22,230,91,0.25);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .news-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 22px rgba(22,230,91,0.15);
+    }
+
+    .news-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .news-content {
+      padding: 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .news-content h2 {
+      font-size: 1.5rem;
+      color: #16e65b;
+      margin-bottom: 8px;
+    }
+
+    .news-content p {
+      color: hsl(0, 0%, 87%);
+      flex: 1;
+      margin-bottom: 12px;
+    }
+
+    .news-content a {
+      background: #16e65b;
+      color: #ffffff;
+      text-align: center;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+    
+    .news-content a:hover { 
+      background: #14c650; 
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111111;
+      border-top: 1px solid #16e65b;
+      margin-top: 40px;
+      padding: 24px 20px;
+      text-align: center;
+      color: #999999;
+      font-size: 0.95rem;
+    }
+
+    footer a {
+      color: #999;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    /* ======== Animação girar em pé ======== */
+    @keyframes girarEmPe {
+        from {
+            transform: rotateY(0deg);
+        }
+
+        to {
+            transform: rotateY(360deg);
+        }
+    }
+
+    /* ======== Estilo logo carregando centralizada ======== */
+    #logo-carregando {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 5000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.4); /* fundo escuro semi-transparente */
+      width: 100vw;
+      height: 100vh;
+    }
+
+    #logo-carregando img {
+      width: 150px; /* tamanho da logo */
+      animation: girarEmPe 1.5s linear infinite;
+      transform-style: preserve-3d;
+      backface-visibility: visible;
+    }
+      
+    nav ul {
+      display: flex !important;
+      flex-direction: row !important;
+      gap: 40px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline-block !important;
+    }
+
+    .social-icons a {
+      font-size: 28px;
+      margin-right: 12px;
+      text-decoration: none;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+    /* Cores originais */
+    .social-icons a.instagram {color: #ff024e; }
+    .social-icons a.linkedin { color: #0A66C2; }
+    .social-icons a.youtube { color: #FF0000; }
+
+
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="imagens/Logo Horbyon.svg" alt="Logo Horbyon" />
+        </a>
+      </div>
+
+    <nav role="navigation" aria-label="Menu Principal">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="inicio.html" aria-current="page">Início</a></li>
+        <li><a href="jogos.html">Jogos</a></li>
+        <li><a href="sobre-a-horbyon.html">Sobre</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" role="region" aria-label="Destaque principal">
+    <h1>Nossos Jogos</h1>
+    <p>Fique por dentro das novidades sobre jogos, apps e tecnologia.</p>
+  </section>
+
+  <!-- LISTA DE NOTÍCIAS -->
+  <section class="news-section" role="region" aria-label="Seção de Notícias">
+    <article class="news-card">
+      <img src="" alt="Imagem relativa à notícia: Lançamento do Zonefall">
+      <div class="news-content">
+        <h2>Lançamento do Zonefall</h2>
+        <p>O aguardado battle royale Zonefall finalmente chega em versão beta. Confira detalhes do mapa futurista e novas armas.</p>
+        <a href="#">Ver mais</a>
+      </div>
+    </article>
+
+    <article class="news-card">
+      <img src="" alt="Imagem relativa à notícia: Novo app de produtividade">
+      <div class="news-content">
+        <h2>Novo app de produtividade</h2>
+        <p>A Horbyon anuncia um app que promete facilitar a organização diária. Veja como ele pode ajudar no seu dia a dia.</p>
+        <a href="#">Ver mais</a>
+      </div>
+    </article>
+
+    <article class="news-card">
+      <img src="" alt="Imagem relativa à notícia: Comunidade em crescimento">
+      <div class="news-content">
+        <h2>Comunidade em crescimento</h2>
+        <p>Nosso Discord alcançou 5 mil membros! Venha participar e contribuir com ideias e feedbacks sobre nossos projetos.</p>
+        <a href="https://discord.gg/xTp4wVUadN" target="_blank" rel="noopener noreferrer">Ver mais</a>
+      </div>
+    </article>
+  </section>
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <p>&copy; 2025 Horbyon. Todos os direitos reservados. | <a href="#">Política de Privacidade</a></p>
+  </footer>
+
+  <!-- SCRIPT MENU -->
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+
+    hamburger.addEventListener("click", () => {
+      const isOpen = hamburger.classList.toggle("open");
+      navLinks.classList.toggle("active");
+      hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      hamburger.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+    });
+
+    // Fecha ao clicar em um link (mobile)
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        if (navLinks.classList.contains("active")) {
+          navLinks.classList.remove("active");
+          hamburger.classList.remove("open");
+          hamburger.setAttribute("aria-expanded", "false");
+          hamburger.setAttribute("aria-label", "Abrir menu");
+        }
+      });
+    });
+  </script>
+
+  <script>
+  // Esconde o loader quando a página terminar de carregar
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("logo-carregando");
+    if (loader) {
+      loader.style.display = "none";
+    }
+  });
+</script>
+
+</body>
+</html>
