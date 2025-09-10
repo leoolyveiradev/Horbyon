@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nossos Apps - Horbyon</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Barlow+Condensed:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <style>
@@ -30,13 +33,16 @@
     h1 {
       font-size: 5rem;
       font-weight: 550;
-      margin-top: -20px; /* sobe 20px */
+      margin-top: -20px;
+      /* sobe 20px */
     }
 
     h2 {
       font-size: 2rem;
-      color: #000; /* preto */
-      font-weight: 430; /* mais fino */
+      color: #000;
+      /* preto */
+      font-weight: 430;
+      /* mais fino */
       line-height: 1.5;
       text-align: center;
     }
@@ -75,16 +81,22 @@
 
     /* ======== MENU ======== */
     .navigation .nav-links {
-      list-style: none;        /* remove as bolinhas verdes */
-      display: flex;           /* deixa os itens lado a lado */
-      flex-direction: row;     /* garante que fiquem em linha */
-      gap: 40px;               /* espaço entre os links */
+      list-style: none;
+      /* remove as bolinhas verdes */
+      display: flex;
+      /* deixa os itens lado a lado */
+      flex-direction: row;
+      /* garante que fiquem em linha */
+      gap: 40px;
+      /* espaço entre os links */
       margin: 0;
       padding: 0;
     }
 
     .nav-links li {
-        list-style: none; /* reforço para tirar marcadores */;
+      list-style: none;
+      /* reforço para tirar marcadores */
+      ;
     }
 
     .nav-links li a {
@@ -168,28 +180,32 @@
     /* Quando o menu hambúrguer está aberto, fixa no topo direito */
     .hamburger.open {
       position: fixed;
-      top: 20px;   /* distância do topo */
-      right: 20px; /* distância da lateral */
-      z-index: 2000; /* garante que fique acima do menu */
+      top: 20px;
+      /* distância do topo */
+      right: 20px;
+      /* distância da lateral */
+      z-index: 2000;
+      /* garante que fique acima do menu */
     }
 
     /* Quando virar X */
     .hamburger.open span {
-      background-color: #16e65b; /* verde */
+      background-color: #16e65b;
+      /* verde */
     }
 
     /* Esconde o hambúrguer no desktop */
     /* Esconde o hambúrguer no desktop */
     @media (min-width: 769px) {
-        .hamburger {
-            display: none;
-        }
+      .hamburger {
+        display: none;
+      }
     }
 
     /* HERO */
     .hero {
-      background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
-                  url("");
+      background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
+        url("");
       background-size: cover;
       background-position: center;
       text-align: center;
@@ -219,17 +235,12 @@
 
     .news-card {
       background: #050505;
-      border: 1px solid rgba(22,230,91,0.25);
+      border: 1px solid rgba(22, 230, 91, 0.25);
       border-radius: 10px;
       overflow: hidden;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       display: flex;
       flex-direction: column;
-    }
-
-    .news-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 22px rgba(22,230,91,0.15);
     }
 
     .news-card img {
@@ -267,37 +278,135 @@
       font-weight: bold;
       transition: background 0.2s;
     }
-    
-    .news-content a:hover { 
-      background: #14c650; 
+
+    .news-content a:hover {
+      background: #14c650;
     }
 
-    /* FOOTER */
-    footer {
-      background: #111111;
-      border-top: 1px solid #16e65b;
-      margin-top: 40px;
-      padding: 24px 20px;
-      text-align: center;
-      color: #999999;
-      font-size: 0.95rem;
+    /*======== FOOTER ========*/
+    .site-footer {
+      background: #000000;
+      color: #fff;
+      padding: 40px 20px 20px;
     }
 
-    footer a {
-      color: #999;
+    .footer-container {
+      background-color: #000000;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      align-items: start;
+    }
+
+    .footer-logo img {
+      max-width: 120px;
+      margin-bottom: 10px;
+    }
+
+    .footer-logo p {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    .social-icons a {
+      font-size: 24px;
+      margin-right: 12px;
+      color: #b4b4b4;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #4d4d4d;
+    }
+
+    .footer-links h4,
+    .footer-newsletter h4 {
+      margin-bottom: 10px;
+      color: #ffffff;
+      font-size: 1.2rem;
+    }
+
+    .footer-container p {
+      color: white;
+    }
+
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin: 6px 0;
+    }
+
+    .footer-links a {
       text-decoration: none;
-      transition: color 0.2s;
+      color: #b4b4b4;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: #4d4d4d;
+    }
+
+    .footer-newsletter form {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .footer-newsletter input {
+      flex: 1;
+      padding: 8px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .footer-newsletter button {
+      padding: 8px 16px;
+      background: #16e65b;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .footer-newsletter button:hover {
+      background: #14c650;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 15px;
+      border-top: 1px solid #333;
+      font-size: 0.9rem;
+      margin-top: 20px;
+    }
+
+    .email-link i {
+      font-size: 28px;
+      /* Ajuste o tamanho do ícone */
+      color: #b4b4b4;
+      /* A cor verde do seu site */
+      transition: color 0.3s ease;
+      /* Adiciona uma transição suave para o hover */
+    }
+
+    .email-link:hover i {
+      color: #4d4d4d;
+      /* Cor ao passar o mouse */
     }
 
     /* ======== Animação girar em pé ======== */
     @keyframes girarEmPe {
-        from {
-            transform: rotateY(0deg);
-        }
+      from {
+        transform: rotateY(0deg);
+      }
 
-        to {
-            transform: rotateY(360deg);
-        }
+      to {
+        transform: rotateY(360deg);
+      }
     }
 
     /* ======== Estilo logo carregando centralizada ======== */
@@ -310,18 +419,20 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: rgba(0, 0, 0, 0.4); /* fundo escuro semi-transparente */
+      background: rgba(0, 0, 0, 0.4);
+      /* fundo escuro semi-transparente */
       width: 100vw;
       height: 100vh;
     }
 
     #logo-carregando img {
-      width: 150px; /* tamanho da logo */
+      width: 150px;
+      /* tamanho da logo */
       animation: girarEmPe 1.5s linear infinite;
       transform-style: preserve-3d;
       backface-visibility: visible;
     }
-      
+
     nav ul {
       display: flex !important;
       flex-direction: row !important;
@@ -344,15 +455,9 @@
     .social-icons a:hover {
       transform: scale(1.2);
     }
-
-    /* Cores originais dos ícones das redes sociais
-    .social-icons a.instagram {color: #ff024e; }
-    .social-icons a.linkedin { color: #0A66C2; }
-    .social-icons a.youtube { color: #FF0000; }
-    */
-
   </style>
 </head>
+
 <body>
 
   <!-- HEADER -->
@@ -364,16 +469,16 @@
         </a>
       </div>
 
-    <nav role="navigation" aria-label="Menu Principal">
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" aria-current="page">Início</a></li>
-        <li><a href="jogos.html">Jogos</a></li>
-        <li><a href="sobre-a-horbyon.html">Sobre</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Abrir menu">
-        <span></span><span></span><span></span>
-      </button>
-    </nav>
+      <nav role="navigation" aria-label="Menu Principal">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="inicio.html" aria-current="page">Início</a></li>
+          <li><a href="jogos.html">Jogos</a></li>
+          <li><a href="sobre-a-horbyon.html">Sobre</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
   </header>
 
   <!-- HERO -->
@@ -384,37 +489,80 @@
 
   <!-- LISTA DE NOTÍCIAS -->
   <section class="news-section" role="region" aria-label="Seção de Notícias">
+  <a href="app-battery-guard.html" class="card-link">
     <article class="news-card">
-      <img src="" alt="Imagem relativa à notícia: Lançamento do Zonefall">
+      <img src="imagens/logoBatteryGuard.png" alt="Novo app">
       <div class="news-content">
-        <h2>Novo app</h2>
-        <p>Em breve, mais detalhes</p>
-        <a href="#">Ver mais</a>
+        <h2>Battery Guard</h2>
+        <p>Em breve, mais detalhes do nosso app q vai mudar a vida das pessoas</p>
       </div>
-    </article>
+      </article>
+    </a>
 
     <article class="news-card">
       <img src="" alt="Imagem relativa à notícia: Novo app de produtividade">
       <div class="news-content">
         <h2>Novo app</h2>
         <p>Em breve, mais detalhes</p>
-        <a href="#">Ver mais</a>
       </div>
     </article>
 
-    <article class="news-card">
-      <img src="" alt="Imagem relativa à notícia: Comunidade em crescimento">
-      <div class="news-content">
-        <h2>Comunidade em crescimento</h2>
-        <p>Venha fazer parte do nosso Discord!</p>
-        <a href="https://discord.gg/hHuU6GbuZz" target="_blank" rel="noopener noreferrer">Ver mais</a>
-      </div>
-    </article>
+    <a href="https://discord.gg/xTp4wVUadN" class="card-link">
+      <article class="news-card">
+        <img src="" alt="Imagem relativa à notícia: Comunidade em crescimento">
+        <div class="news-content">
+          <h2>Comunidade em crescimento</h2>
+          <p>Venha fazer parte do nosso Discord!</p>
+          <img src="https://wallpapers.com/images/high/discord-pictures-bg2ppqwoq708f0p5.webp" alt="Logo Discord" />
+        </div>
+      </article>
+    </a>
   </section>
 
   <!-- FOOTER -->
-  <footer role="contentinfo">
-    <p>&copy; 2025 Horbyon. Todos os direitos reservados. | <a href="#">Política de Privacidade</a></p>
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <div class="footer-logo">
+        <img src="imagens/Logo Horbyon.svg" alt="Logo Horbyon">
+        <p>Explorando o universo digital com criatividade e inovação.</p>
+      </div>
+
+      <div>
+        <h4>Redes Sociais</h4>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/horbyon" target="_blank" rel="noopener" class="instagram"
+            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com" target="_blank" rel="noopener" class="twitter" aria-label="X/Twitter"><i
+              class="fab fa-twitter"></i></a>
+          <a href="https://youtube.com/@horbyon" target="_blank" rel="noopener" class="youtube" aria-label="YouTube"><i
+              class="fab fa-youtube"></i></a>
+          <a href="https://linkedin.com/in/leoolyveiradev" target="_blank" rel="noopener" class="linkedin"
+            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4>Termos</h4>
+        <ul>
+          <li><a href="#">Política de Privacidade</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+          <li><a href="#">Configurações de Cookies</a></li>
+          <li><a href="#">Política de Privacidade de Dados</a></li>
+          <li><a href="#">Suporte</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contato</h4> <a href="mailto:horbyonstudios@gmail.com" class="email-link">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 HORBYON. Todos os direitos reservados.</p>
+    </div>
   </footer>
 
   <!-- SCRIPT MENU -->
@@ -443,16 +591,15 @@
   </script>
 
   <script>
-  // Esconde o loader quando a página terminar de carregar
-  window.addEventListener("load", () => {
-    const loader = document.getElementById("logo-carregando");
-    if (loader) {
-      loader.style.display = "none";
-    }
-  });
-</script>
+    // Esconde o loader quando a página terminar de carregar
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("logo-carregando");
+      if (loader) {
+        loader.style.display = "none";
+      }
+    });
+  </script>
 
 </body>
+
 </html>
-
-
