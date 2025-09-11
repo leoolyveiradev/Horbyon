@@ -194,7 +194,7 @@ h3 {
 /* ======== FOOTER/RODAPÉ ======== */
 .site-footer {
   background: #000000;
-  color: #fff;
+  color: #b4b4b4;
   padding: 40px 20px 20px;
 }
 
@@ -227,8 +227,7 @@ h3 {
   color: #4d4d4d;
 }
 
-.footer-links h4,
-.footer-newsletter h4 {
+.footer-container h4 {
   margin-bottom: 10px;
   color: #ffffff;
   font-size: 1.2rem;
@@ -520,3 +519,4 @@ h3 {
 .social-icons a:hover {
   transform: scale(1.2);
 }
+
