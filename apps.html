@@ -290,6 +290,10 @@
       padding: 40px 20px 20px;
     }
 
+    .footer-bottom p {
+      color:#b4b4b4;
+    }
+
     .footer-container {
       background-color: #000000;
       display: grid;
@@ -455,7 +459,18 @@
     .social-icons a:hover {
       transform: scale(1.2);
     }
+
+    /* Isso resolve o problema de links dentro dos cards */
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+
+
   </style>
+
+
 </head>
 
 <body>
@@ -489,18 +504,18 @@
 
   <!-- LISTA DE NOTÍCIAS -->
   <section class="news-section" role="region" aria-label="Seção de Notícias">
-  <a href="app-battery-guard.html" class="card-link">
-    <article class="news-card">
-      <img src="imagens/Logo Battery Guard.png" alt="App Battery Guard">
-      <div class="news-content">
-        <h2>Battery Guard</h2>
-        <p>Em breve, mais detalhes do nosso app q vai mudar a vida das pessoas</p>
-      </div>
+    <a href="" class="card-link">
+      <article class="news-card">
+        <img src="" alt="App">
+        <div class="news-content">
+          <h2>App em breve</h2>
+          <p>Em breve, mais detalhes do nosso app q vai mudar a vida das pessoas</p>
+        </div>
       </article>
     </a>
 
     <article class="news-card">
-      <img src="" alt="Imagem relativa à notícia: Novo app de produtividade">
+      <img src="" alt="Imagem relativa à notícia: Novo app">
       <div class="news-content">
         <h2>Novo app</h2>
         <p>Em breve, mais detalhes</p>
@@ -602,5 +617,3 @@
 </body>
 
 </html>
-
-
