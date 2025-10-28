@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jogos - Horbyon</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="jogos.css"/>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="jogos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
+
 <body>
 
   <!-- Loader -->
@@ -21,16 +25,16 @@
   <header class="site-header">
     <div class="container">
       <div class="logo">
-        <a href="jogos.html">
+        <a href="jogos">
           <img src="imagens/Logo Horbyon.svg" alt="Logo Horbyon" />
         </a>
       </div>
 
       <nav class="navigation">
         <ul class="nav-links">
-          <li><a href="index.html" id="link-inicio">Início</a></li>
-          <li><a href="apps.html">Apps</a></li>
-          <li><a href="sobre-a-horbyon.html" id="link-sobre">Sobre</a></li>
+          <li><a href="/" id="link-inicio">Início</a></li>
+          <li><a href="apps" id="link-apps">Apps</a></li>
+          <li><a href="sobre-a-horbyon" id="link-sobre">Sobre</a></li>
         </ul>
         <div class="hamburger">
           <span></span>
@@ -51,27 +55,30 @@
         <div class="conteudo">
           <h2>Jogo Aventura</h2>
           <p>Um jogo cheio de desafios e exploração em mundos incríveis.</p>
-          <a href="jogo1.html" class="btn">Jogar</a>
+          <a href="jogo1" class="btn">Jogar</a>
         </div>
       </div>
 
       <!-- Card de jogo 2 -->
       <div class="jogo-card">
-        <img src="https://img.freepik.com/fotos-premium/criancas-felizes-de-desenho-animado-correndo-juntas-no-deserto_151355-21344.jpg?w=2000" alt="Corrida Radical">
+        <img
+          src="https://img.freepik.com/fotos-premium/criancas-felizes-de-desenho-animado-correndo-juntas-no-deserto_151355-21344.jpg?w=2000"
+          alt="Corrida Radical">
         <div class="conteudo">
           <h2>Corrida Radical</h2>
           <p>Velocidade e adrenalina em pistas malucas!</p>
-          <a href="jogo2.html" class="btn">Jogar</a>
+          <a href="jogo2" class="btn">Jogar</a>
         </div>
       </div>
 
       <!-- Card de jogo 3 -->
       <div class="jogo-card">
-        <img src="https://minhafestapersonalizada.com/wp-content/uploads/2023/09/CAPA-QUEBRA-CABECA-2-PECAS-ANIMAIS.png" alt="Quebra-Cabeça">
+        <img src="https://minhafestapersonalizada.com/wp-content/uploads/2023/09/CAPA-QUEBRA-CABECA-2-PECAS-ANIMAIS.png"
+          alt="Quebra-Cabeça">
         <div class="conteudo">
           <h2>Quebra-Cabeça</h2>
           <p>Use sua lógica para resolver desafios cada vez mais difíceis.</p>
-          <a href="jogo3.html" class="btn">Jogar</a>
+          <a href="jogo3" class="btn">Jogar</a>
         </div>
       </div>
 
@@ -82,12 +89,12 @@
   <!-- Rodapé -->
   <footer>
     <div class="footer-container">
-      
+
       <div class="footer-logo">
         <img src="imagens/Logo Horbyon.svg" alt="Logo Horbyon">
         <p>Explorando o universo digital com criatividade e inovação.</p>
         <div class="social-icons">
-          <a href="www.instagram.com/horbyon" class="instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
           <a href="#" class="linkedin"><i class="fab fa-linkedin"></i></a>
           <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
         </div>
@@ -107,11 +114,16 @@
       <div class="footer-newsletter">
         <h4>Newsletter</h4>
         <p>Receba novidades e atualizações direto no seu e-mail.</p>
-        <form>
-          <input type="email" placeholder="Digite seu e-mail" required />
+
+        <form id="newsletterForm">
+          <div class="email-input-container">
+            <input type="text" id="emailPrefix" placeholder="Digite seu e-mail" required />
+            <span class="email-suffix">@gmail.com</span>
+          </div>
           <button type="submit">Enviar</button>
         </form>
       </div>
+
 
     </div>
 
@@ -126,6 +138,50 @@
     });
   </script>
 
-</body>
-</html>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('newsletterForm');
+      const prefixoInput = document.getElementById('emailPrefix');
+      const sufixo = '@gmail.com';
 
+      form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Impede o envio padrão do formulário (por enquanto)
+
+        const prefixo = prefixoInput.value.trim();
+
+        if (prefixo === "") {
+          // Se estiver vazio, a validação 'required' do HTML5 já deve funcionar,
+          // mas podemos reforçar a mensagem.
+          return;
+        }
+
+        // 1. Cria o e-mail completo
+        const emailFinal = prefixo + sufixo;
+
+        // 2. Cria um novo input oculto
+        const hiddenInput = document.createElement('input');
+        hiddenInput.type = 'hidden';
+        hiddenInput.name = 'email'; // Este é o nome que seu servidor deve buscar
+        hiddenInput.value = emailFinal;
+
+        // 3. Adiciona o input oculto ao formulário antes de enviar
+        form.appendChild(hiddenInput);
+
+        // Opcional: Para testar no console antes de enviar de verdade:
+        console.log("E-mail completo a ser enviado: " + emailFinal);
+
+        // 4. Envia o formulário
+        // Se você tiver um sistema de backend, você enviaria assim:
+        // form.submit(); 
+
+        // Se você estiver usando AJAX/fetch, você faria a requisição aqui.
+        alert(`Inscrição para ${emailFinal} simulada com sucesso!`);
+        form.reset(); // Limpa o formulário após a simulação
+        hiddenInput.remove(); // Remove o campo oculto para o próximo envio
+      });
+    });
+  </script>
+
+</body>
+
+</html>
