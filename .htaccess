@@ -1,0 +1,17 @@
+# 1 / Ativa o módulo de reescrita de URLs */
+RewriteEngine On
+
+# 2. Evita que a pasta seja listada quando acessada (boa prática de segurança)
+Options -Indexes
+
+# 3. Redirecionamento 301 (permanente) de index.html para a raiz do domínio (/)
+# Se alguém digitar a URL completa com index.html, será redirecionado para a URL limpa
+RewriteRule ^index\.html$ / [R=301,L]
+
+# 4. Regra principal: Remove a extensão .html de todas as outras páginas
+# Verifica se o que foi solicitado NÃO é um diretório (-d)
+RewriteCond %{REQUEST_FILENAME} !-d
+# Verifica se existe um arquivo com a extensão .html correspondente (-f)
+RewriteCond %{REQUEST_FILENAME}.html -f
+# Se as condições acima forem verdadeiras, serve o arquivo .html internamente, mas a URL fica limpa.
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
