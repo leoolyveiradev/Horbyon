@@ -16,6 +16,15 @@
   <!-------- ÍCONES -------->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
+  <style>
+    .game-cover {
+    width: 200px;   /* largura da imagem */
+    height: auto;   /* mantém a proporção */
+    border: none; /* sem borda arredondada */
+  }
+
+
+</style>
 <body>
 
   <!-------- LOADER -------->
@@ -26,17 +35,17 @@
   <header class="site-header">
     <div class="container">
       <div class="logo">
-        <a href="inicio.html">
+        <a href="/">
           <img src="imagens/Logo Horbyon.svg" alt="Logo Horbyon" />
         </a>
       </div>
 
       <nav class="navigation">
         <ul class="nav-links" id="navLinks">
-          <li><a href="inicio.html">Início</a></li>
-          <li><a href="jogos.html" class="active">Jogos</a></li>
-          <li><a href="apps.html">Apps</a></li>
-          <li><a href="sobre-a-horbyon.html">Sobre</a></li>
+          <li><a href="/">Início</a></li>
+          <li><a href="jogos" class="active">Jogos</a></li>
+          <li><a href="apps">Apps</a></li>
+          <li><a href="sobre-a-horbyon">Sobre</a></li>
         </ul>
 
         <div class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
@@ -50,9 +59,9 @@
     <article class="game-detail">
 
       <img
-        src="imagens/logoBatteryGuard.png"
+        src="imagens/Logo Protected Battery.png"
         alt="Capa do app Battery Guard"
-        class="game-cover"
+        class="game-cover" 
       />
 
       <p>
@@ -74,7 +83,7 @@
 
       <button id="btnBaixar" type="button">Baixar</button>
 
-      <a href="apps.html" class="btn" style="display:block; max-width:220px; margin:36px auto 0; text-align:center;">
+      <a href="apps" class="btn" style="display:block; max-width:220px; margin:36px auto 0; text-align:center;">
         Voltar aos Apps
       </a>
     </article>
