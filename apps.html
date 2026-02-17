@@ -34,15 +34,12 @@
       font-size: 5rem;
       font-weight: 550;
       margin-top: -20px;
-      /* sobe 20px */
     }
 
     h2 {
       font-size: 2rem;
       color: #000;
-      /* preto */
       font-weight: 430;
-      /* mais fino */
       line-height: 1.5;
       text-align: center;
     }
@@ -82,20 +79,15 @@
     /* ======== MENU ======== */
     .navigation .nav-links {
       list-style: none;
-      /* remove as bolinhas verdes */
       display: flex;
-      /* deixa os itens lado a lado */
       flex-direction: row;
-      /* garante que fiquem em linha */
       gap: 40px;
-      /* espaço entre os links */
       margin: 0;
       padding: 0;
     }
 
     .nav-links li {
       list-style: none;
-      /* reforço para tirar marcadores */
       ;
     }
 
@@ -177,24 +169,18 @@
       }
     }
 
-    /* Quando o menu hambúrguer está aberto, fixa no topo direito */
     .hamburger.open {
       position: fixed;
       top: 20px;
-      /* distância do topo */
       right: 20px;
-      /* distância da lateral */
       z-index: 2000;
-      /* garante que fique acima do menu */
     }
 
     /* Quando virar X */
     .hamburger.open span {
       background-color: #16e65b;
-      /* verde */
     }
 
-    /* Esconde o hambúrguer no desktop */
     /* Esconde o hambúrguer no desktop */
     @media (min-width: 769px) {
       .hamburger {
@@ -390,51 +376,12 @@
 
     .email-link i {
       font-size: 28px;
-      /* Ajuste o tamanho do ícone */
       color: #b4b4b4;
-      /* A cor verde do seu site */
       transition: color 0.3s ease;
-      /* Adiciona uma transição suave para o hover */
     }
 
     .email-link:hover i {
       color: #4d4d4d;
-      /* Cor ao passar o mouse */
-    }
-
-    /* ======== Animação girar em pé ======== */
-    @keyframes girarEmPe {
-      from {
-        transform: rotateY(0deg);
-      }
-
-      to {
-        transform: rotateY(360deg);
-      }
-    }
-
-    /* ======== Estilo logo carregando centralizada ======== */
-    #logo-carregando {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 5000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: rgba(0, 0, 0, 0.4);
-      /* fundo escuro semi-transparente */
-      width: 100vw;
-      height: 100vh;
-    }
-
-    #logo-carregando img {
-      width: 150px;
-      /* tamanho da logo */
-      animation: girarEmPe 1.5s linear infinite;
-      transform-style: preserve-3d;
-      backface-visibility: visible;
     }
 
     nav ul {
@@ -603,17 +550,7 @@
       });
     });
   </script>
-
-  <script>
-    // Esconde o loader quando a página terminar de carregar
-    window.addEventListener("load", () => {
-      const loader = document.getElementById("logo-carregando");
-      if (loader) {
-        loader.style.display = "none";
-      }
-    });
-  </script>
-
+  
 </body>
-
 </html>
+
