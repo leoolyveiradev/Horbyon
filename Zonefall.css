@@ -53,7 +53,7 @@ body {
 }
 
 .logo img {
-  height: 70px;           /* ajuste fino da logo */
+  height: 70px;
   width: auto;
   display: block;
   transition: transform .2s ease;
@@ -137,32 +137,6 @@ body {
   .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
   .hamburger.open span:nth-child(2) { opacity: 0; }
   .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
-}
-
-/* ======== LOADER ======== */
-#logo-carregando {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0,0,0,.4);
-  z-index: 2000;
-}
-
-#logo-carregando img {
-  width: 150px;
-  animation: girarEmPe 1.5s linear infinite;
-  transform-style: preserve-3d;
-}
-
-@keyframes girarEmPe {
-  from {
-    transform: rotateY(0deg);
-  }
-  to   {
-    transform: rotateY(360deg);
-  }
 }
 
 /* ======== MAIN / GAME DETAIL ======== */
@@ -366,3 +340,4 @@ button:active, .btn:active {
 .social-icons a.instagram { color: #ff024e; }
 .social-icons a.linkedin { color: #0A66C2; }
 .social-icons a.youtube  { color: #FF0000; }
+
