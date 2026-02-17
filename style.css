@@ -1,3 +1,32 @@
+@font-face {
+  font-family: "Barlow Condensed";
+  src: url("Fonts/BarlowCondensed-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("Fonts/BebasNeue-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lobster Two";
+  src: url("Fonts/LobsterTwo-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Alumni Sans SC";
+  src: url("Fonts/AlumniSansSC-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -14,6 +43,7 @@ body {
 
 /* ======== TÍTULOS ======== */
 h1 {
+  font-family: "Bebas Neue", sans-serif;
   font-size: 5rem;
   font-weight: 550;
   margin-top: -20px;
@@ -479,3 +509,4 @@ h3 {
 .social-icons a:hover {
   transform: scale(1.2);
 }
+
