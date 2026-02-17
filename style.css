@@ -17,15 +17,12 @@ h1 {
   font-size: 5rem;
   font-weight: 550;
   margin-top: -20px;
-  /* sobe 20px */
 }
 
 h2 {
   font-size: 2rem;
   color: #ffffff;
-  /* preto */
   font-weight: 430;
-  /* mais fino */
   line-height: 1.5;
   text-align: center;
 }
@@ -116,13 +113,13 @@ h3 {
 /* ======== GALERIA - 2 CARDS POR LINHA ======== */
 /* ======== SEÇÃO GALERIA ======== */
 .gallery {
-  background-color: #1b1b1b; /* Defina a cor de fundo preta */
-  padding: 80px 20px; /* Adiciona um espaçamento para que o conteúdo não grude nas bordas */
+  background-color: #1b1b1b;
+  padding: 80px 20px;
 }
 
 .noticias-cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 cards por linha */
+  grid-template-columns: repeat(2, 1fr);
   gap: 28px;
   max-width: 1200px;
   margin: 40px auto;
@@ -187,7 +184,7 @@ h3 {
 /* ======== RESPONSIVIDADE ======== */
 @media (max-width: 900px) {
   .noticias-cards {
-    grid-template-columns: 1fr; /* 1 card por linha em tablets e mobile */
+    grid-template-columns: 1fr;
   }
 }
 
@@ -292,13 +289,13 @@ h3 {
 }
 
 .email-link i {
-  font-size: 28px; /* Ajuste o tamanho do ícone */
-  color: #b4b4b4; /* A cor verde do seu site */
-  transition: color 0.3s ease; /* Adiciona uma transição suave para o hover */
+  font-size: 28px;
+  color: #b4b4b4;
+  transition: color 0.3s ease;
 }
 
 .email-link:hover i {
-  color: #4d4d4d; /* Cor ao passar o mouse */
+  color: #4d4d4d;
 }
 
 
@@ -463,50 +460,13 @@ h3 {
 .hamburger.open {
   position: fixed;
   top: 20px;
-  /* distância do topo */
   right: 20px;
-  /* distância da lateral */
   z-index: 2000;
-  /* garante que fique acima do menu */
 }
 
 /* Quando virar X */
 .hamburger.open span {
   background-color: #16e65b;
-  /* verde */
-}
-
-/* ======== Animação girar em pé ======== */
-@keyframes girarEmPe {
-  from {
-    transform: rotateY(0deg);
-  }
-
-  to {
-    transform: rotateY(360deg);
-  }
-}
-
-/* ======== Estilo logo carregando centralizada ======== */
-#logo-carregando {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 5000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.4);
-  width: 100vw;
-  height: 100vh;
-}
-
-#logo-carregando img {
-  width: 150px;
-  animation: girarEmPe 1.5s linear infinite;
-  transform-style: preserve-3d;
-  backface-visibility: visible;
 }
 
 .social-icons a {
@@ -519,4 +479,3 @@ h3 {
 .social-icons a:hover {
   transform: scale(1.2);
 }
-
