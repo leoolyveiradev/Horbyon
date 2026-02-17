@@ -113,6 +113,24 @@ h3 {
   font-size: 1.4rem;
 }
 
+/* ANIMAÇÃO DO FUNDO */
+#hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #16e65b;
+}
+/* FIM */
+
 /* ======== SEÇÃO APRESENTAÇÃO ======== */
 .apresentacao {
   padding: 80px 20px;
@@ -509,4 +527,5 @@ h3 {
 .social-icons a:hover {
   transform: scale(1.2);
 }
+
 
