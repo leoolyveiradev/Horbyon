@@ -4,34 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Battery Guard - Horbyon</title>
-
   <!-------- GOOGLE FONTES -------->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
-  <!-------- LINK DO CSS -------->
   <link rel="stylesheet" href="Zonefall.css" />
-
   <!-------- ÍCONES -------->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
   <style>
     .game-cover {
-    width: 200px;   /* largura da imagem */
-    height: auto;   /* mantém a proporção */
-    border: none; /* sem borda arredondada */
+    width: 200px;   
+    height: auto;
+    border: none;
   }
 
 
 </style>
 <body>
-
   <!-------- LOADER -------->
-  <div id="logo-carregando">
-    <img src="imagens/Logo Horbyon.svg" alt="Logo carregando" />
-  </div>
-
   <header class="site-header">
     <div class="container">
       <div class="logo">
@@ -131,12 +122,6 @@
   </footer>
 
   <script>
-    //== ESCONDE O LOADER QUANDO A PÁGINA TERMINAR DE CARREGAR ==//
-    window.addEventListener("load", () => {
-      const loader = document.getElementById("logo-carregando");
-      if (loader) loader.style.display = "none";
-    });
-
     //== TOGLE DO MENU MOBILE ==//
     const hamburger = document.getElementById("hamburger");
     const navLinks = document.getElementById("navLinks");
@@ -172,3 +157,4 @@
   <script src="scripts/Zonefall.js"></script>
 </body>
 </html>
+
