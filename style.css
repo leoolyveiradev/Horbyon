@@ -1,37 +1,40 @@
 @font-face {
-  font-family: "Barlow Condensed";
-  src: url("Fonts/BarlowCondensed-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Alumni Sans SC';
+  src: url('Fonts/AlumniSansSC-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "Bebas Neue";
-  src: url("Fonts/BebasNeue-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Barlow Condensed';
+  src: url('Fonts/BarlowCondensed-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "Lobster Two";
-  src: url("Fonts/LobsterTwo-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Bebas Neue';
+  src: url('Fonts/BebasNeue-Regular.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "Alumni Sans SC";
-  src: url("Fonts/AlumniSansSC-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'Lobster Two';
+  src: url('Fonts/LobsterTwo-Regular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Barlow Condensed';
+  src: url('Fonts/BarlowCondensed-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Barlow Condensed';
+  src: url('Fonts/BarlowCondensed-Thin.ttf') format('truetype');
+  font-weight: 100;
+}
 
 html {
   scroll-behavior: smooth;
+  padding-top: 80px;
 }
 
-/* ======== BASE ======== */
 body {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 16px;
@@ -41,35 +44,69 @@ body {
   padding: 0;
 }
 
-/* ======== TÍTULOS ======== */
-h1 {
-  font-family: "Bebas Neue", sans-serif;
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* camada escura por cima (opcional, mas recomendado) */
+.video-bg::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: -1;
+}
+
+/* conteúdo do site */
+.conteudo {
+  position: relative;
+  z-index: 1;
+  color: #14c650;
+  padding: 40px;
+  margin: 11%;
+}
+
+.pagina-home h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  text-align: center;
   font-size: 5rem;
   font-weight: 550;
-  margin-top: -20px;
+  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 h2 {
+  font-family: 'Barlow Condensed', sans-serif;
   font-size: 2rem;
   color: #ffffff;
-  font-weight: 430;
-  line-height: 1.5;
+  font-weight: 100;
+  line-height: 1.0;
   text-align: center;
+  margin-top: -78px;
 }
 
 h3 {
   font-size: 1.6rem;
 }
 
-/* ======== CABEÇALHO ======== */
+/*======== CABEÇALHO ========*/
 .site-header {
   min-height: 10px;
   background-color: #000000;
-  border-bottom: 1px solid #16e65b;
+  border-bottom: 0.1px solid #16e65b;
   padding: 3px 0;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
+  overflow: hidden;
 }
 
 /* ======== CONTAINER FLEXÍVEL ======== */
@@ -85,6 +122,7 @@ h3 {
 
 /* ======== LOGO ======== */
 .logo img {
+  font-family: 'Lobster Two', cursive;
   height: 110px;
   width: auto;
 }
@@ -99,7 +137,7 @@ h3 {
 }
 
 .nav-links li a {
-  color: #fFF;
+  color: #fff;
   text-decoration: none;
   font-size: 1.4rem;
   font-weight: 500;
@@ -113,28 +151,31 @@ h3 {
   font-size: 1.4rem;
 }
 
-/* ANIMAÇÃO DO FUNDO */
+<!-- ANIMAÇÃO DO FUNDO
 #apresentacao {
   min-height: 100vh;
+  width: 100%;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .apresentacao-content {
   position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  z-index: 2;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #16e65b;
 }
-
-/* FIM */
+<!-- FIM 
 
 /* ======== SEÇÃO APRESENTAÇÃO ======== */
 .apresentacao {
   padding: 80px 20px;
-  background-color: #000000;
+  background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
 }
 
 .texto-apresentacao {
@@ -158,14 +199,46 @@ h3 {
   background-color: #14c650;
 }
 
-/* ======== GALERIA - 2 CARDS POR LINHA ======== */
-/* ======== SEÇÃO GALERIA ======== */
-.gallery {
+/* ======== SEÇÃO GALERIA - 2 CARDS POR LINHA ======== */
+.pagina-home .gallery {
   background-color: #1b1b1b;
   padding: 80px 20px;
 }
 
-.noticias-cards {
+.pagina-sobre .gallery {
+  background-color: #1b1b1b;
+  padding: 80px 20px;
+}
+
+/* ======== CARD BASE (TODAS AS PÁGINAS) ======== */
+.card {
+  background: #000000;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content h3 {
+  margin: 0 0 10px 0;
+  color: #16e65b;
+}
+
+.card-content p {
+  flex: 1;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+/* ======== HOME | CARDS DE NOTÍCIAS ======== */
+.pagina-home .noticias-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 28px;
@@ -174,47 +247,17 @@ h3 {
   padding: 0 20px;
 }
 
-.noticias-cards .card {
-  background: #000000;
-  border: 1px solid rgba(22, 230, 91, 0.25);
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-.noticias-cards .card:hover {
-  transform: translateY(-5px);
+.pagina-home .noticias-cards .card:hover {
   box-shadow: 0 8px 22px rgba(22, 230, 91, 0.15);
 }
 
-.noticias-cards .card img {
+.pagina-home .card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
 
-.noticias-cards .card-content {
-  padding: 16px;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.noticias-cards .card-content h3 {
-  margin: 0 0 10px 0;
-  font-size: 1.4rem;
-  color: #16e65b;
-}
-
-.noticias-cards .card-content p {
-  flex: 1;
-  margin-bottom: 12px;
-  color: #ffffff;
-}
-
-.noticias-cards .card-content a.btn {
+.pagina-home .card-content a.btn {
   background: #16e65b;
   color: #ffffff;
   text-align: center;
@@ -222,25 +265,29 @@ h3 {
   padding: 8px 16px;
   border-radius: 6px;
   font-weight: bold;
-  transition: background 0.2s;
 }
 
-.noticias-cards .card-content a.btn:hover {
+.pagina-home .card-content a.btn:hover {
   background: #14c650;
 }
 
-/* ======== RESPONSIVIDADE ======== */
+/* Responsivo - HOME */
 @media (max-width: 900px) {
-  .noticias-cards {
+  .pagina-home .noticias-cards {
     grid-template-columns: 1fr;
   }
 }
 
+
 /* ======== FOOTER/RODAPÉ ======== */
 .site-footer {
   background: #000000;
-  color: #b4b4b4;
+  color: #fff;
   padding: 40px 20px 20px;
+}
+
+.footer-bottom p {
+  color: #b4b4b4;
 }
 
 .footer-container {
@@ -269,10 +316,11 @@ h3 {
 }
 
 .social-icons a:hover {
-  color: #4d4d4d;
+  color: #16e65b;
 }
 
-.footer-container h4 {
+.footer-links h4,
+.footer-newsletter h4 {
   margin-bottom: 10px;
   color: #ffffff;
   font-size: 1.2rem;
@@ -299,7 +347,7 @@ h3 {
 }
 
 .footer-links a:hover {
-  color: #4d4d4d;
+  color: #16e65b;
 }
 
 .footer-newsletter form {
@@ -343,9 +391,8 @@ h3 {
 }
 
 .email-link:hover i {
-  color: #4d4d4d;
+  color: #16e65b;
 }
-
 
 /* ======== RESPONSIVIDADE ======== */
 @media (max-width: 768px) {
@@ -442,6 +489,8 @@ h3 {
   }
 }
 
+/*==============================================*/
+
 /* ======== HERO SOBRE ======== */
 .hero-sobre {
   background-color: #16e65b;
@@ -450,7 +499,8 @@ h3 {
   text-align: center;
 }
 
-.hero-sobre h1 {
+/* ===== SOBRE ===== */
+.pagina-sobre h1 {
   font-size: 3rem;
   margin-bottom: 10px;
 }
@@ -483,28 +533,30 @@ h3 {
   text-align: center;
 }
 
-.sobre-projetos .cards {
+/* ======== SOBRE | CARDS DE PREMIAÇÕES ======== */
+.pagina-sobre .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 900px;
+  margin: 40px auto 0;
+  padding: 0 20px;
 }
 
-.sobre-projetos .card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+.pagina-sobre .card {
+  background: #111111;
   text-align: center;
-  transition: transform 0.3s ease;
 }
 
-.sobre-projetos .card:hover {
-  transform: translateY(-5px);
+.pagina-sobre .card-content h3 {
+  font-size: 1.4rem;
 }
 
-/* Quando o menu hambúrguer está aberto, fixa no topo direito */
+.pagina-sobre .card-content p {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+
 .hamburger.open {
   position: fixed;
   top: 20px;
@@ -512,7 +564,6 @@ h3 {
   z-index: 2000;
 }
 
-/* Quando virar X */
 .hamburger.open span {
   background-color: #16e65b;
 }
@@ -527,7 +578,4 @@ h3 {
 .social-icons a:hover {
   transform: scale(1.2);
 }
-
-
-
 
