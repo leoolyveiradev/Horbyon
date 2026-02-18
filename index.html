@@ -10,74 +10,97 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="pagina-home">
+
+  <video class="video-bg" autoplay muted loop playsinline>
+    <source src="videos/video1.mp4" type="video/mp4">
+  </video>
+
+  <div class="conteudo">
+    <h1>HORBYON</h1>
+  </div>
+
   <header class="site-header">
     <div class="container">
-      <div class="logo"><a href="index.html"><img src="imagens/Logo Horbyon.svg" alt="Logo Horbyon"/></a></div>
+      <div class="logo"><a href="index.html"><img src="imagens/Logo Horbyon.svg" alt="Logo Horbyon" /></a></div>
       <nav class="navigation">
         <ul class="nav-links">
           <li><a href="/">Início</a></li>
-          <li><a href="jogos.html" id="link-jogos">Jogos</a></li>
-          <li><a href="apps.html">Apps</a></li>
+          <li><a href="jogos" id="link-jogos">Jogos</a></li>
+          <li><a href="apps">Apps</a></li>
           <li><a href="sobre-a-horbyon" id="link-sobre">Sobre</a></li>
         </ul>
         <div class="hamburger"> <span></span> <span></span> <span></span> </div>
       </nav>
     </div>
   </header>
-  
-  <section class="apresentacao">
+
+  <section id="apresentacao" class="apresentacao">
     <div class="apresentacao-content">
       <div class="texto-apresentacao">
-        <h1></h1>
-        <h2 style="font-weight: 30;"> "Transformando ideias em  <br> experiências extraordinárias". </h2>
+        <h2>"Transformando ideias em <br> experiências extraordinárias."</h2>
       </div>
     </div>
   </section>
+
   <section class="gallery" id="galeria">
     <h2><i>Radar Digital</i></h2>
-    <div class="cards noticias-cards">
-    <a href="Zonefall.html" class="card-link">
+
+    <div class="noticias-cards">
+
       <article class="card">
-        <img src="capasparajogos/CapaJ_Zonefall.png"/>
-        <div class="card-content">
-          <h3>...</h3>
-          <p>Mais detalhes em breve</p>
-    </a>
-        </div>
-      </article> 
-      <article class="card"> <img src="imagens/3.svg" alt="App 1" />
+        <a href="Zonefall.html" class="card-link">
+          <img src="capasparajogos/CapaJ_Zonefall.png" alt="Zonefall">
+          <div class="card-content">
+            <h3>Zonefall</h3>
+            <p>Mais detalhes em breve</p>
+          </div>
+        </a>
+      </article>
+
+      <article class="card">
+        <img src="imagens/3.svg" alt="App 1">
         <div class="card-content">
           <h3>...</h3>
           <p>Mais detalhes em breve</p>
         </div>
       </article>
-      <article class="card"> <img src="./imagens/4.svg" alt="Jogo 2" />
-        <div class="card-content">
-          <h3>...</h3>
-          <p>Mais detalhes em breve</p>
-        </div>
-      </article> 
-      <article class="card"> <img src="./imagens/3.svg" alt="Jogo 3" />
-        <div class="card-content">
-          <h3>...</h3>
-          <p>Mais detalhes em breve</p>
-        </div>
-      </article>
-      <article class="card"> <img src="./imagens/2.svg" alt="Jogo 4" />
+
+      <article class="card">
+        <img src="imagens/4.svg" alt="Jogo 2">
         <div class="card-content">
           <h3>...</h3>
           <p>Mais detalhes em breve</p>
         </div>
       </article>
-      <article class="card"> <img src="./imagens/4.svg" alt="Jogo 5" />
+
+      <article class="card">
+        <img src="imagens/3.svg" alt="Jogo 3">
         <div class="card-content">
           <h3>...</h3>
           <p>Mais detalhes em breve</p>
         </div>
       </article>
+
+      <article class="card">
+        <img src="imagens/2.svg" alt="Jogo 4">
+        <div class="card-content">
+          <h3>...</h3>
+          <p>Mais detalhes em breve</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="imagens/4.svg" alt="Jogo 5">
+        <div class="card-content">
+          <h3>...</h3>
+          <p>Mais detalhes em breve</p>
+        </div>
+      </article>
+
     </div>
   </section>
+
   <footer class="site-footer">
     <div class="footer-container">
       <div class="footer-logo"> <img src="imagens/Logo Horbyon.svg" alt="Logo Horbyon">
@@ -108,28 +131,35 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2024 HORBYON. Todos os direitos reservados.</p>
+      <p>&copy; 2025 HORBYON. Todos os direitos reservados.</p>
     </div>
   </footer>
 
   <script src="scripts/script.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script> -->
 
-  <script>
+  <!-- <script>
     VANTA.NET({
       el: "#apresentacao",
       mouseControls: true,
       touchControls: true,
       gyroControls: false,
+
       color: 0x16e65b,
       backgroundColor: 0x000000,
-      points: 10.0,
-      maxDistance: 20.0,
-      spacing: 18.0
+
+      points: 14.0,
+      maxDistance: 25.0,
+      spacing: 18.0,
+
+      scale: 1.0,
+      scaleMobile: 1.0
     });
-  </script>
+  </script> -->
 
 </body>
+
 </html>
+
